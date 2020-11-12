@@ -87,7 +87,7 @@ java -version
 找到jdk1.x.x_xx/jre/lib/security/java.security文件，在文件中找到securerandom.source这个设置项，将其改为：
 ```
 securerandom.source=file:/dev/./urandom
-```
+```  
 
 如果tomcat输出中文乱码
 ```
@@ -95,7 +95,10 @@ locale
 locale -a
 LANG=C.UTF-8  (有的是zh_CN.UTF-8，不过我在本地没发现这种编码)
 source /etc/profile
-```
+```  
+本地lib包路径
+```  
+![输入图片说明](https://images.gitee.com/uploads/images/2020/1112/144236_f60358ba_5391530.png "project.png")
 
 #### 配置讯飞动态库
 根据自己的系统版本，分别把libmsc32.so 或者 libmsc64.so 上传到/lib/ 和 /lib64/ 目录。
